@@ -12,7 +12,7 @@ class TestPitStops:
         args = self.fp.pit_stopsA(2023, 24, 1)
         assert args['year'] == 2023
         assert args['race_round'] == 24
-        assert args['stop_number'] == 1 # fail
+        assert args['stop_number'] == 1 # fail here
         assert args['fastest'] == False
 
     def test_pit_stopsB(self):
@@ -23,7 +23,7 @@ class TestPitStops:
         assert args['fastest'] == False
 
     def test_pit_stopsC(self):
-        args = self.fp.pit_stopsC(2023, 24, stop_number=1)
+        args = self.fp.pit_stopsC(2023, 24, 1) # fail here
         assert args['year'] == 2023
         assert args['race_round'] == 24
         assert args['stop_number'] == 1
